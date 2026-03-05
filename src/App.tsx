@@ -1,41 +1,42 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import ballClosed from './assets/ballClosed.png'
 import ballOpen from './assets/ballOpen.png'
-import ball from './assets/ball.png'
 import './App.css'
 
 
 function App() {
 
   const [answer, setAnswer] = useState("")
-  const [nextAnswer, setNextAnswer] = useState("")
   const [question, setQuestion] = useState("")
   const [shake, setShake] = useState(false)
-  const [isBallOpen, setBallOpen] = useState(false)
+  const [isBallOpen, setBallOpen] = useState(false);
 
-  let options = ['Yes', 'No', 'Maybe..', 'Definitely not']
+  let options = ['Maybe..', 'Not too sure..', 'Possibly..', 'I think so', 'Ask me another time..', 'No']
 
   const buttonHandler = () => {
     if (!shake && question.includes("?") && question.length>1){
+      setBallOpen(false)
       setShake(true) 
-      setBallOpen(false);
       const randomOptionIndex = Math.floor(Math.random()*options.length) 
       const randomOption = options[randomOptionIndex]
-      setAnswer(randomOption)
+      setAnswer("")
       console.log(answer)
-      setTimeout(()=>setNextAnswer(answer), 2000)
+      setTimeout(()=>{setAnswer(randomOption), setShake(false), setBallOpen(true)}, 1900)
     }
   }
 
   return (
     <>
     <div id="appBody">
-      <h1>Welcome to magic 8 ball</h1>
+      <div id="header">
+        <h1>Welcome to magic 8 ball</h1>
+      </div>
+
       <div className='imageHolder'>
-        <img  src={isBallOpen?ballOpen:ballClosed} alt="" id="ball"
-        onAnimationEnd={()=>{setShake(false); setBallOpen(true)}} 
-        className={(!isBallOpen)?"shakeIMG":"openBall"}
+        <img src={isBallOpen?ballOpen:ballClosed} alt="ball" id="ball"
+        className={(shake)?"shakeIMG":""}
         />
+        <p hidden={!isBallOpen} className="answer">{answer}</p>
       </div>
 
       <br />
@@ -43,10 +44,12 @@ function App() {
           <input type="text" id="question" placeholder='Enter a question...' value={question} onChange={(e)=>setQuestion(e.target.value)}/>
           <button onClick={buttonHandler} id="submitQuestion" disabled={shake} >Submit question</button>
       </div>
-          <p>{nextAnswer}</p>
+
       </div>
     </>
   )
 }
 
 export default App
+
+
