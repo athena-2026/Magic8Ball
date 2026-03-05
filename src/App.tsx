@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import ballClosed from './assets/ballClosed.png'
+import ballOpen from './assets/ballOpen.png'
 import ball from './assets/ball.png'
 import './App.css'
 

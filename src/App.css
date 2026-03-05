@@ -16,7 +16,7 @@ body {
 
 #submitQuestion {
   width: fit-content;
-  height: 40%;
+  height: 45%;
   border-radius: 15px;
   border: 3px solid hsl(282, 73%, 51%);
   margin-left: 5px;
@@ -28,17 +28,23 @@ body {
   background-color: white;
 }
 
+#submitQuestion:hover{
+  cursor: pointer;
+  border-color: hsl(282, 68%, 45%);
+  background-color: rgb(210, 210, 210);
+}
+
 #question {
   width: 20%;
   height: 40%;
   border-radius: 20px;
-  border: 2px solid rgb(34, 170, 220);
+  border: 3px solid hsl(282, 73%, 51%);
   padding: 0 5px;
   font-family: Arial, sans-serif;
   font-weight: bold;
   font-size: larger;
   text-indent: 10px;
-  color: hsl(0, 0%, 100%);
+  color: hsl(282, 73%, 51%);
 }
 
 #ball {
@@ -70,6 +76,6 @@ body {
     transform: rotate(-40deg);
   }
   100% {
-    transform: rotate(0deg)
+    transform: rotate(0deg);
   }
 }
