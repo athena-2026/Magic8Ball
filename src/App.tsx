@@ -21,7 +21,7 @@ function App() {
       const randomOption = options[randomOptionIndex]
       setAnswer("")
       console.log(answer)
-      setTimeout(()=>{setAnswer(randomOption), setShake(false), setBallOpen(true)}, 1900)
+      setTimeout(()=>{setAnswer(randomOption), setQuestion(""), setShake(false), setBallOpen(true)}, 1920)
     }
   }
 
