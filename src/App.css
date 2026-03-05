@@ -1,9 +1,14 @@
-.ball {
-  animation-name: shake;
-  animation-duration: 3s;
+#appBody {
+  text-align: center;
 }
 
-@keyframes shake {
+.shakeIMG {
+  animation-name: 'shake';
+  animation-duration: 3s;
+  animation-direction: alternate;
+}
+
+@keyframes shake{
   0% {
     transform: rotate(0deg);
   }
@@ -11,10 +16,10 @@
     transform: rotate(40deg);
   }
   50% {
-    transform: rotate(0deg)
+    transform: rotate(-40deg)
   }
   75% {
-    transform: rotate(-40deg)
+    transform: rotate(40deg)
   }
   100% {
     transform: rotate(0deg)
