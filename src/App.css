@@ -1,6 +1,27 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+#appBody {
   text-align: center;
+}
+
+.shakeIMG {
+  animation-name: 'shake';
+  animation-duration: 3s;
+  animation-direction: alternate;
+}
+
+@keyframes shake{
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(40deg);
+  }
+  50% {
+    transform: rotate(-40deg)
+  }
+  75% {
+    transform: rotate(40deg)
+  }
+  100% {
+    transform: rotate(0deg)
+  }
 }
