@@ -14,6 +14,10 @@ body {
   height: 100px;
 }
 
+.imageHolder img {
+  width: 100%;
+  height: 100%;
+}
 #submitQuestion {
   width: fit-content;
   height: 45%;
@@ -59,6 +63,20 @@ body {
   animation-timing-function: ease;
 }
 
+.openBall {
+  animation-name: 'opening';
+  animation-duration: 2s;
+}
+
+@keyframes opening {
+  0% {
+    filter: opacity(0%);
+  }
+  50% {
+    filter: opacity(100%);
+  }
+}
+
 @keyframes shake{
   0% {
     transform: rotate(0deg);
@@ -77,5 +95,6 @@ body {
   }
   100% {
     transform: rotate(0deg);
+    filter: opacity(0%);
   }
 }
