@@ -19,7 +19,7 @@ function App() {
       const randomOption = options[randomOptionIndex]
       setAnswer(randomOption)
       console.log(answer)
-      setTimeout(()=>setNextAnswer(answer), 3000)
+      setTimeout(()=>setNextAnswer(answer), 2000)
     }
   }
 
@@ -29,9 +29,11 @@ function App() {
       <h1>Welcome to magic 8 ball</h1>
       <img src={ball} alt="" id="ball" onAnimationEnd={()=>setShake(false)} className={shake? "shakeIMG":""}/>
       <br />
-      <input type="text" placeholder='Enter a question...' value={question} onChange={(e)=>setQuestion(e.target.value.trim())}/>
-      <button onClick={buttonHandler} disabled={shake} >Submit question</button>
-      <p>{nextAnswer}</p>
+      <div className="inputField">
+          <input type="text" id="question" placeholder='Enter a question...' value={question} onChange={(e)=>setQuestion(e.target.value)}/>
+          <button onClick={buttonHandler} id="submitQuestion" disabled={shake} >Submit question</button>
+      </div>
+          <p>{nextAnswer}</p>
       </div>
     </>
   )
