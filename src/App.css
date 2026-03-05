@@ -1,25 +1,73 @@
-#appBody {
+*:focus{
+  outline:none
+}
+
+body {
+  background-color: hsla(153, 51%, 78%, 0.521);
+}
+#appBody{
   text-align: center;
+}
+.inputField {
+  border: none;
+  font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+  height: 100px;
+}
+
+#submitQuestion {
+  width: fit-content;
+  height: 40%;
+  border-radius: 15px;
+  border: 3px solid hsl(282, 73%, 51%);
+  margin-left: 5px;
+  padding: 0 5px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: larger;
+  color:hsl(282, 73%, 51%);
+  background-color: white;
+}
+
+#question {
+  width: 20%;
+  height: 40%;
+  border-radius: 20px;
+  border: 2px solid rgb(34, 170, 220);
+  padding: 0 5px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: larger;
+  text-indent: 10px;
+  color: hsl(0, 0%, 100%);
+}
+
+#ball {
+  width: 30%;
+  height: auto;
 }
 
 .shakeIMG {
   animation-name: 'shake';
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-direction: alternate;
+  animation-timing-function: ease;
 }
 
 @keyframes shake{
   0% {
     transform: rotate(0deg);
   }
-  25% {
+  20% {
     transform: rotate(40deg);
   }
-  50% {
+  40% {
     transform: rotate(-40deg)
   }
-  75% {
+  60% {
     transform: rotate(40deg)
+  }
+  80% {
+    transform: rotate(-40deg);
   }
   100% {
     transform: rotate(0deg)
