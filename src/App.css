@@ -1,0 +1,22 @@
+.ball {
+  animation-name: shake;
+  animation-duration: 3s;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(40deg);
+  }
+  50% {
+    transform: rotate(0deg)
+  }
+  75% {
+    transform: rotate(-40deg)
+  }
+  100% {
+    transform: rotate(0deg)
+  }
+}

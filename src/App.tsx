@@ -24,8 +24,8 @@ function App() {
   return (
     <>
       <h1>Welcome to magic 8 ball</h1>
-      <img src="" alt="" id="ball" onAnimationEnd={()=>setShake(false)} />
-      <button onClick={buttonHandler} disabled={shake}>Submit question</button>
+      <img src="" alt="" id="ball" onAnimationEnd={()=>setShake(false)} className={shake? "shake":""}/>
+      <button onClick={buttonHandler} disabled={shake} >Submit question</button>
       <input type="text" placeholder='Enter a question...' value={question} onChange={(e)=>setQuestion(e.target.value.trim())}/>
       <p>{nextAnswer}</p>
     </>
