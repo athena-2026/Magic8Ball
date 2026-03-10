@@ -3,15 +3,16 @@ import ballClosed from './assets/ballClosed.png'
 import ballOpen from './assets/ballOpen.png'
 import './App.css'
 
-import Title from './Title';
+import Title from './Components/Title';
 
 
 function App() {
 
-  const [answer, setAnswer] = useState("")
-  const [question, setQuestion] = useState("")
-  const [shake, setShake] = useState(false)
-  const [isBallOpen, setBallOpen] = useState(false);
+  const [answer, setAnswer] = useState<string>("")
+  const [question, setQuestion] = useState<string>("")
+  const [shake, setShake] = useState<boolean>(false)
+  const [isBallOpen, setBallOpen] = useState<boolean>(false);
+ 
 
   let options = ['Maybe..', 'Not too sure..', 'Possibly..', 'I think so', 'Ask me another time..', 'No']
 
@@ -28,6 +29,7 @@ function App() {
   }
 
   return (
+
     <>
       <Title />
 
