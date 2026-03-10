@@ -3,9 +3,8 @@
 }
 
 * {
-  block-size: auto;
+  box-sizing: border-box;
 }
-
 #header {
   display:inline-block;
   color: hsl(0, 0%, 100%);
@@ -75,6 +74,7 @@ body {
   color:hsl(0, 0%, 100%);
   background-color: rgb(175, 128, 218);
   text-shadow: 1px 1px 1px rgb(162, 226, 240);
+  font-size: medium;
 }
 
 
