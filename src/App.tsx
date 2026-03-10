@@ -1,7 +1,9 @@
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 import ballClosed from './assets/ballClosed.png'
 import ballOpen from './assets/ballOpen.png'
 import './App.css'
+
+import Title from './Title';
 
 
 function App() {
@@ -27,14 +29,11 @@ function App() {
 
   return (
     <>
-    <div id="appBody">
-      <div id="header">
-        <h1>Welcome to magic 8 ball</h1>
-      </div>
+      <Title />
 
       <div className='imageHolder'>
-        <img src={isBallOpen?ballOpen:ballClosed} alt="ball" id="ball"
-        className={(shake)?"shakeIMG":""}
+        <img src={isBallOpen ? ballOpen : ballClosed} alt="ball" id="ball"
+          className={(shake) ? "shakeIMG" : ""}
         />
         <p hidden={!isBallOpen} className="answer">{answer}</p>
       </div>
@@ -45,7 +44,6 @@ function App() {
           <button onClick={buttonHandler} id="submitQuestion" disabled={shake} >Submit question</button>
       </div>
 
-      </div>
     </>
   )
 }
