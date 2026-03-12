@@ -1,15 +1,19 @@
-import { useRef, useState } from 'react'
-import ballClosed from './assets/ballClosed.png'
-import ballOpen from './assets/ballOpen.png'
 import './App.css'
+
+import Title from './Components/Title';
+import ImageHolder from './Components/ImageHolder';
+import InputField from './Components/InputField';
+import {AppProviders} from './Context/ContextProvider';
 
 
 function App() {
 
-  const [answer, setAnswer] = useState("")
-  const [question, setQuestion] = useState("")
-  const [shake, setShake] = useState(false)
-  const [isBallOpen, setBallOpen] = useState(false);
+  /*
+  const [answer, setAnswer] = useState<string>("")
+  const [question, setQuestion] = useState<string>("")
+  const [shake, setShake] = useState<boolean>(false)
+  const [isBallOpen, setBallOpen] = useState<boolean>(false);
+ 
 
   let options = ['Maybe..', 'Not too sure..', 'Possibly..', 'I think so', 'Ask me another time..', 'No']
 
@@ -21,31 +25,19 @@ function App() {
       const randomOption = options[randomOptionIndex]
       setAnswer("")
       console.log(answer)
-      setTimeout(()=>{setAnswer(randomOption), setShake(false), setBallOpen(true)}, 1900)
+      setTimeout(()=>{setAnswer(randomOption), setQuestion(""), setShake(false), setBallOpen(true)}, 1950)
     }
   }
-
+  */
   return (
+
     <>
-    <div id="appBody">
-      <div id="header">
-        <h1>Welcome to magic 8 ball</h1>
-      </div>
-
-      <div className='imageHolder'>
-        <img src={isBallOpen?ballOpen:ballClosed} alt="ball" id="ball"
-        className={(shake)?"shakeIMG":""}
-        />
-        <p hidden={!isBallOpen} className="answer">{answer}</p>
-      </div>
-
+    <AppProviders>
+      <Title />
+      <ImageHolder/>
       <br />
-      <div className="inputField">
-          <input type="text" id="question" placeholder='Enter a question...' value={question} onChange={(e)=>setQuestion(e.target.value)}/>
-          <button onClick={buttonHandler} id="submitQuestion" disabled={shake} >Submit question</button>
-      </div>
-
-      </div>
+      <InputField/>
+    </AppProviders>
     </>
   )
 }
