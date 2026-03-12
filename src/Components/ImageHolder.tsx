@@ -2,8 +2,8 @@ import { useBall } from "../Context/BallOpenContext"
 import { useAnswer } from "../Context/AnswerContext"
 import { useShake } from "../Context/ShakeContext"
 
-import ballClosed from './assets/ballClosed.png'
-import ballOpen from './assets/ballOpen.png'
+import ballClosed from '../assets/ballClosed.png'
+import ballOpen from '../assets/ballOpen.png'
 
 const ImageHolder: React.FC = () => {
     const {answer} = useAnswer();
@@ -15,7 +15,7 @@ const ImageHolder: React.FC = () => {
         <img src={isBallOpen ? ballOpen : ballClosed} alt="ball" id="ball"
           className={(shake) ? "shakeIMG" : ""}
         />
-        <p hidden={!isBallOpen} className="answer">{answer}</p>
+        <p data-testid="answer" hidden={!isBallOpen} className="answer">{answer}</p>
       </div>
     )
 }
