@@ -4,6 +4,7 @@ import ballOpen from './assets/ballOpen.png'
 import './App.css'
 
 import Title from './Components/Title';
+import {AppProviders} from './Context/ContextProvider';
 
 
 function App() {

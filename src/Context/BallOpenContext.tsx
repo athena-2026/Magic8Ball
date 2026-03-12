@@ -8,7 +8,7 @@ type BallOpenContextType = {
 
 const ballOpenContext = createContext<BallOpenContextType|undefined>(undefined)
 
-export const ShakeProvider: React.FC<{children:ReactNode}> = ({children}) => {
+export const BallProvider: React.FC<{children:ReactNode}> = ({children}) => {
   const [isBallOpen, setBallOpen] = useState<boolean>(false);
   return (
     <ballOpenContext.Provider value={{isBallOpen, setBallOpen}}>
