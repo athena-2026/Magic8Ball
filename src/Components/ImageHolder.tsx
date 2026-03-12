@@ -2,8 +2,8 @@ import { useBall } from "../Context/BallOpenContext"
 import { useAnswer } from "../Context/AnswerContext"
 import { useShake } from "../Context/ShakeContext"
 
-import ballClosed from '../assets/ballClosed.png'
-import ballOpen from '../assets/ballOpen.png'
+import ballClosed from '../assets/Ball/ballClosed.png'
+import ballOpen from '../assets/Ball/ballOpen.png'
 
 const ImageHolder: React.FC = () => {
     const {answer} = useAnswer();
