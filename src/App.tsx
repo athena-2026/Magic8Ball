@@ -1,14 +1,14 @@
-import { useState } from 'react'
-import ballClosed from './assets/ballClosed.png'
-import ballOpen from './assets/ballOpen.png'
 import './App.css'
 
 import Title from './Components/Title';
+import ImageHolder from './Components/ImageHolder';
+import InputField from './Components/InputField';
 import {AppProviders} from './Context/ContextProvider';
 
 
 function App() {
 
+  /*
   const [answer, setAnswer] = useState<string>("")
   const [question, setQuestion] = useState<string>("")
   const [shake, setShake] = useState<boolean>(false)
@@ -28,25 +28,16 @@ function App() {
       setTimeout(()=>{setAnswer(randomOption), setQuestion(""), setShake(false), setBallOpen(true)}, 1950)
     }
   }
-
+  */
   return (
 
     <>
+    <AppProviders>
       <Title />
-
-      <div className='imageHolder'>
-        <img src={isBallOpen ? ballOpen : ballClosed} alt="ball" id="ball"
-          className={(shake) ? "shakeIMG" : ""}
-        />
-        <p hidden={!isBallOpen} className="answer">{answer}</p>
-      </div>
-
+      <ImageHolder/>
       <br />
-      <div className="inputField">
-          <input type="text" id="question" placeholder='Enter a question...' value={question} onChange={(e)=>setQuestion(e.target.value)}/>
-          <button onClick={buttonHandler} id="submitQuestion" disabled={shake} >Submit question</button>
-      </div>
-
+      <InputField/>
+    </AppProviders>
     </>
   )
 }
