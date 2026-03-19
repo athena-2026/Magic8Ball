@@ -20,7 +20,7 @@ export const AnswerProvider: React.FC<{children:ReactNode}> = ({children}) => {
 export const useAnswer = (): AnswerContextType => {
     const context = useContext(answerContext)
     if (!context) {
-        throw new Error('Answer context is not provided')
+        throw new Error(`Answer context is not provided, ${context}`)
     }
     return context
 }
