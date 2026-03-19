@@ -39,6 +39,21 @@ describe('Input Field component', ()=> {
         const text = screen.getByRole("textbox").textContent
         expect(button.hasAttribute('disabled')).toBe(false)
     })
+    test ('input with ? and length above 1 should be accepted', () => {
+        render(
+        <AppProviders>
+            <InputField/>
+        </AppProviders>)
+
+        const button = screen.getByRole("button", {name:"Submit question" });
+        const inputBox = screen.getByRole("textbox")
+        inputBox.textContent = "Will this be accepted?"
+
+        fireEvent.click(button)
+
+        const text = screen.getByRole("textbox").textContent
+        expect(button.hasAttribute('disabled')).toBe(true)
+    })
 })
 
 describe('Integration testing between input field component and image holder component', ()=> {
