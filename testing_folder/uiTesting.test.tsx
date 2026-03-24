@@ -1,4 +1,4 @@
-import { expect, vi } from 'vitest';
+import { expect } from 'vitest';
 import { fireEvent, render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
@@ -58,6 +58,7 @@ describe('Input Field component', ()=> {
 })
 
 describe('Integration testing between input field component and image holder component', ()=> {
+    
     test('answer should be cleared/empty before displaying random answer', ()=> {
         render(
         <AppProviders>

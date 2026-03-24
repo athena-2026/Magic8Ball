@@ -102,6 +102,13 @@ body {
 }
 
 
+.counter {
+  font-weight: bold;
+  font-size: larger;
+  color: coral;
+  font-family: 'Franklin Gothic Medium',sans-serif;
+}
+
 .shakeIMG {
   animation-name: 'shake';
   animation-duration: 2s;
@@ -112,6 +119,20 @@ body {
 .openBall {
   animation-name: 'opening';
   animation-duration: 1s;
+}
+
+
+
+@keyframes increaseSize {
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(3);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes fade{
