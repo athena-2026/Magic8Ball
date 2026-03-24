@@ -31,6 +31,7 @@ body {
   font-family: 'Franklin Gothic Medium', Arial, sans-serif;
   height: 6vw;
   margin-top: 1%;
+  display: contents;
 }
 
 
@@ -86,7 +87,7 @@ body {
 
 #question {
   width: 25%;
-  height: 45%;
+  height:45%;
   border-radius: 20px;
   border: 3.5px solid hsl(0, 0%, 0%);
   padding: 0 5px;
@@ -101,11 +102,14 @@ body {
   color: rgb(200, 200, 200);
 }
 
+#navbarList {
+  list-style-type: none;
+  padding:0;
+  margin: 0;
+}
 
 .counter {
-  font-weight: bold;
   font-size: larger;
-  color: coral;
   font-family: 'Franklin Gothic Medium',sans-serif;
 }
 
@@ -121,19 +125,6 @@ body {
   animation-duration: 1s;
 }
 
-
-
-@keyframes increaseSize {
-  0%{
-    transform: scale(1);
-  }
-  50%{
-    transform: scale(3);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 
 @keyframes fade{
   0%{
