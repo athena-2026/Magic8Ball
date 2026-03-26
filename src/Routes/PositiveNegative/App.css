@@ -16,18 +16,6 @@
   text-shadow: 2px 2px 5px rgb(127, 232, 255);;
 }
 
-
-body {
-  margin: 0;
-  padding:0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-image: url('https://th.bing.com/th/id/R.fcdba644c6627897a9e28b332b19d87d?rik=%2bDYX4AyuN8JAag&riu=http%3a%2f%2fwww.clipartbest.com%2fcliparts%2fyck%2f4bX%2fyck4bX7cE.png&ehk=A4YcRZBwQBxr4nIXadbN%2ftiNfLYRDX6ZaDPxAy1ohqo%3d&risl=&pid=ImgRaw&r=0');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-attachment: fixed;
-  text-align: center;
-}
-
 .inputField {
   border: none;
   font-family: 'Franklin Gothic Medium', Arial, sans-serif;
@@ -112,36 +100,6 @@ body {
   color: rgb(200, 200, 200);
 }
 
-#navbarList {
-  list-style-type: none;
-  background-color: rgba(255, 255, 255, 0.429);
-  padding:0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  border-radius: 2px;
-}
-
-#navbarList li{
-  float: left;
-}
-
-#navbarList li a {
-  display: block;
-  color: rgb(0, 0, 0);
-  font-family: 'Franklin Gothic Light', sans-serif;
-  font-size: medium;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-#navbarList li a:hover {
-  background-color: rgba(255, 255, 255, 0.429);
-}
-
-#navbarList li a.active {
-  background-color: aqua;
-}
 
 .counter {
   font-size: larger;
