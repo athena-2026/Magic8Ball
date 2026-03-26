@@ -1,21 +1,10 @@
-*:focus{
-  outline:none
+.Original{
+background-image: url('./backgrounds/background.png')
 }
 
-* {
-  box-sizing: border-box;
+.Edition1 {
+  background-image: url('./backgrounds/Mode1Background.png')
 }
-
-body {
-  margin: 0;
-  padding:0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-attachment: fixed;
-  text-align: center;
-}
-
 
 #navbarList {
   list-style-type: none;
@@ -23,9 +12,12 @@ body {
   padding:0;
   margin: 0;
   display: flex;
-  border-radius: 2px;
-  border-bottom: 2px solid black;
   justify-content: center;
+  border-radius: 2px;
+}
+
+#navbarList li{
+  float: left;
 }
 
 #navbarList li a {
@@ -33,11 +25,14 @@ body {
   color: rgb(0, 0, 0);
   font-family: 'Franklin Gothic Light', sans-serif;
   font-size: medium;
-  padding: 12px 14px;
+  padding: 14px 16px;
   text-decoration: none;
 }
 
-
 #navbarList li a:hover {
   background-color: rgba(255, 255, 255, 0.429);
+}
+
+#navbarList li a.active {
+  background-color: aqua;
 }

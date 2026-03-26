@@ -1,5 +1,5 @@
-import '../App.css'
-import { useCounter } from "../Context/CounterContext"
+import '../Edition1.css'
+import { useCounter } from "../../Context/CounterContext"
 
 function Counter() {
   const {counter} = useCounter()

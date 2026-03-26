@@ -1,29 +1,13 @@
-*:focus{
-  outline:none
-}
 
-* {
-  box-sizing: border-box;
-}
 #header {
   display:inline-block;
   color: hsl(0, 0%, 100%);
-  padding: 0 8px;
+  padding: 0 5px;
   font-weight: bolder;
-  font-size: large;
+  font-size: medium;
   font-family: Arial;
   width: fit-content;
   text-shadow: 2px 2px 5px rgb(127, 232, 255);;
-}
-
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-image: url('https://th.bing.com/th/id/R.fcdba644c6627897a9e28b332b19d87d?rik=%2bDYX4AyuN8JAag&riu=http%3a%2f%2fwww.clipartbest.com%2fcliparts%2fyck%2f4bX%2fyck4bX7cE.png&ehk=A4YcRZBwQBxr4nIXadbN%2ftiNfLYRDX6ZaDPxAy1ohqo%3d&risl=&pid=ImgRaw&r=0');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-attachment: fixed;
-  text-align: center;
 }
 
 .inputField {
@@ -38,7 +22,7 @@ body {
 .imageHolder {
   position: relative;
   width: 450px;
-  height: 500px;
+  height: 475px;
   margin: auto;
 }
 
@@ -50,17 +34,22 @@ body {
 }
 
 
-.answer {
+.imageHolder p{
   font-weight: bold;
   font-size: xx-large;
   position: fixed;
-  color: white;
   top: 44%;
   left: 50%;
   transform: translate(-50%, -50%);
   animation-name: 'fade';
   animation-duration: 2s;
 }
+
+.imageHolder p{
+  color: rgb(61, 132, 255);
+    filter: drop-shadow(1px 1px 20px rgb(117, 211, 255))
+}
+
 #submitQuestion {
   width: fit-content;
   height: 50%;
@@ -102,11 +91,6 @@ body {
   color: rgb(200, 200, 200);
 }
 
-#navbarList {
-  list-style-type: none;
-  padding:0;
-  margin: 0;
-}
 
 .counter {
   font-size: larger;
