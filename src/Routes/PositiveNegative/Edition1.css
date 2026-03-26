@@ -6,9 +6,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background-image: url('./BallAssets/Mode1Background.png');
-}
 
 #header {
   display:inline-block;
@@ -22,7 +19,7 @@ body {
   text-shadow: 2px 2px 5px rgb(127, 232, 255);;
 }
 
-#header p {
+#header span {
   margin: 0;
   padding:0;
   color: greenyellow;
@@ -83,8 +80,8 @@ body {
   font-weight: bold;
   font-size: larger;
   color:hsl(0, 0%, 100%);
-  background-color: rgb(175, 128, 218);
-  text-shadow: 1px 1px 1px rgb(162, 226, 240);
+  background-color: rgb(0, 119, 16);
+  text-shadow: 1px 1px 1px rgb(85, 255, 0);
   font-size: medium;
 }
 
@@ -92,7 +89,7 @@ body {
 #submitQuestion:hover{
   cursor: pointer;
   border-color: hsl(0, 0%, 0%);
-  background-color: rgb(230, 43, 40);
+  background-color: rgb(170, 6, 3);
   text-shadow: 1px 1px 1px rgb(127, 232, 255);
 }
 

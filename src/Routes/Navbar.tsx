@@ -5,8 +5,8 @@ function Navbar() {
   return (
       <nav>
             <ul id="navbarList">
-                <li><Link to="/">Normal edition</Link></li>
-                <li><Link to="/edition1">Positive/Negative mode</Link></li>
+                <li><Link reloadDocument to="/">Normal mode</Link></li>
+                <li><Link reloadDocument to="/edition1">Positive/Negative mode</Link></li>
             </ul>
       </nav>
   )

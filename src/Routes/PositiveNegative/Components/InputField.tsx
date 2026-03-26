@@ -4,6 +4,7 @@ import { useBall } from "../../Context/BallOpenContext"
 import { useCounter } from "../../Context/CounterContext"
 import { usePositive } from "../../Context/PositiveContext"
 import { FetchData } from "./FetchData"
+import '../Edition1.css'
 
 
 const InputField: React.FC = () => {

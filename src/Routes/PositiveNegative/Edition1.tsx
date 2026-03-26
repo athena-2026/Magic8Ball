@@ -7,16 +7,17 @@ import {AppProviders} from '../Context/ContextProvider';
 
 
 function App() {
+  document.body.className="Edition1"
   return (
-
     <>
         <AppProviders>
-            <Title />
-            <ImageHolder />
-            <br />
-            <InputField />
-            <Counter />
+          <Title />
+          <ImageHolder />
+          <br />
+          <InputField />
+          <Counter />
         </AppProviders>
+
     </>
   )
 }

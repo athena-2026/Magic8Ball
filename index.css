@@ -1,4 +1,10 @@
+.Original{
+background-image: url('./backgrounds/background.png')
+}
 
+.Edition1 {
+  background-image: url('./backgrounds/Mode1Background.png')
+}
 
 #navbarList {
   list-style-type: none;

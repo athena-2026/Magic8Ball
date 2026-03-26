@@ -7,8 +7,8 @@ import {AppProviders} from '../Context/ContextProvider';
 
 
 function App() {
+  document.body.className="Original"
   return (
-
     <>
         <AppProviders>
             <Title />
