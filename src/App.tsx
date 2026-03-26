@@ -4,6 +4,7 @@ import Title from './Components/Title';
 import ImageHolder from './Components/ImageHolder';
 import InputField from './Components/InputField';
 import Counter from './Components/Counter'
+import Navbar from './Components/Navbar';
 import {AppProviders} from './Context/ContextProvider';
 
 
@@ -34,6 +35,7 @@ function App() {
 
     <>
     <AppProviders>
+      <Navbar/>
       <Title />
       <ImageHolder/>
       <br />

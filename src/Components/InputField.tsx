@@ -3,6 +3,7 @@ import { useShake } from "../Context/ShakeContext"
 import { useBall } from "../Context/BallOpenContext"
 import { useAnswer } from "../Context/AnswerContext"
 import { useCounter } from "../Context/CounterContext"
+import {usePositive} from "../Context/PositiveContext"
 
 const InputField: React.FC = () => {
 
@@ -12,6 +13,7 @@ const InputField: React.FC = () => {
     const { setBallOpen } = useBall();
     const { answer, setAnswer } = useAnswer();
     const {setCounter} = useCounter();
+    const {setPositive} = usePositive();
 
 
     const buttonHandler = () => {
@@ -23,19 +25,39 @@ const InputField: React.FC = () => {
             /*const randomOptionIndex = Math.floor(Math.random() * options.length)
             const randomOption = options[randomOptionIndex]*/
 
-            fetch('http://localhost:8080/api/phrase')
-                .then(response => response.text())
-                .then(data => {
-                    setTimeout(()=> {
-                        setAnswer(data)
-                        setQuestion("")
-                        setShake(false)
-                        setBallOpen(true)
+            const idx = Math.random() * 1
+            console.log(`Idx: ${idx}`)
 
-                    },1950)
-                })
-                .catch(error => console.error('Error: ', error))
+            if (idx < 0.5) {
+                fetch('http://localhost:8080/api/positivePhrase')
+                    .then(response => response.text())
+                    .then(data => {
+                        setTimeout(() => {
+                            setAnswer(data)
+                            setQuestion("")
+                            setShake(false)
+                            setBallOpen(true)
+                            setPositive(true)
 
+                        }, 1950)
+                    })
+                    .catch(error => console.error('Error: ', error))
+            }
+            else {
+                fetch('http://localhost:8080/api/negativePhrase')
+                    .then(response => response.text())
+                    .then(data => {
+                        setTimeout(() => {
+                            setAnswer(data)
+                            setQuestion("")
+                            setShake(false)
+                            setBallOpen(true)
+                            setPositive(false)
+
+                        }, 1950)
+                    })
+                    .catch(error => console.error('Error: ', error))
+            }
 
             //setAnswer("")
             console.log(answer)

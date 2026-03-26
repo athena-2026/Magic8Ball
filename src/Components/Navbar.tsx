@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import '../App.css'
 
 function Navbar() {
   return (
@@ -6,7 +6,9 @@ function Navbar() {
       <nav>
         <div>
             <ul id="navbarList">
-                <li><a href=""><img src="" alt="" /></a></li>
+                <li><a href="">Link1</a></li>
+                <li><a href="">Link2</a></li>
+                <li><a href="">Link3</a></li>
             </ul>
         </div>
       </nav>

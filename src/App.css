@@ -68,8 +68,8 @@ body {
     filter: drop-shadow(1px 1px 20px rgb(131, 255, 117))
 }
 .imageHolder .negative{
-  color: rgb(170, 37, 13);
-  filter: drop-shadow(1px 1px 20px rgb(255, 57, 57))
+  color: rgb(236, 42, 8);
+  filter: drop-shadow(1px 1px 20px rgb(255, 0, 0))
 }
 #submitQuestion {
   width: fit-content;
