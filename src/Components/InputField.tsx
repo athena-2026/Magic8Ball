@@ -1,19 +1,21 @@
 import { useQuestion } from "../Context/QuestionContext"
 import { useShake } from "../Context/ShakeContext"
 import { useBall } from "../Context/BallOpenContext"
-import { useAnswer } from "../Context/AnswerContext"
 import { useCounter } from "../Context/CounterContext"
-import {usePositive} from "../Context/PositiveContext"
+import { usePositive } from "../Context/PositiveContext"
+import { FetchData } from "./FetchData"
+
 
 const InputField: React.FC = () => {
 
-    //let options = ['Maybe..', 'Not too sure..', 'Possibly..', 'I think so', 'Ask me another time..', 'No']
+
     const { question, setQuestion } = useQuestion();
     const { shake, setShake } = useShake();
     const { setBallOpen } = useBall();
-    const { answer, setAnswer } = useAnswer();
     const {setCounter} = useCounter();
     const {setPositive} = usePositive();
+    const {fetchingData} = FetchData();
+
 
 
     const buttonHandler = () => {
@@ -22,46 +24,16 @@ const InputField: React.FC = () => {
             setShake(true)
             setCounter(prev =>prev+1)
 
-            /*const randomOptionIndex = Math.floor(Math.random() * options.length)
-            const randomOption = options[randomOptionIndex]*/
-
-            const idx = Math.random() * 1
-            console.log(`Idx: ${idx}`)
-
-            if (idx < 0.5) {
-                fetch('http://localhost:8080/api/positivePhrase')
-                    .then(response => response.text())
-                    .then(data => {
-                        setTimeout(() => {
-                            setAnswer(data)
-                            setQuestion("")
-                            setShake(false)
-                            setBallOpen(true)
-                            setPositive(true)
-
-                        }, 1950)
-                    })
-                    .catch(error => console.error('Error: ', error))
+            const isPositive = Math.random() <0.5
+            let phrase = ""
+            if (isPositive) {
+                phrase = "positivePhrase"
+                setPositive(true)
+            } else {
+                phrase = "negativePhrase"
+                setPositive(false)
             }
-            else {
-                fetch('http://localhost:8080/api/negativePhrase')
-                    .then(response => response.text())
-                    .then(data => {
-                        setTimeout(() => {
-                            setAnswer(data)
-                            setQuestion("")
-                            setShake(false)
-                            setBallOpen(true)
-                            setPositive(false)
-
-                        }, 1950)
-                    })
-                    .catch(error => console.error('Error: ', error))
-            }
-
-            //setAnswer("")
-            console.log(answer)
-            //setTimeout(() => { setAnswer(fetchAnswer), setQuestion(""), setShake(false), setBallOpen(true) }, 1950)
+            fetchingData(phrase)
         }
     }
 
@@ -71,8 +43,6 @@ const InputField: React.FC = () => {
             <button onClick={buttonHandler} id="submitQuestion" disabled={shake} >Submit question</button>
         </div>
     )
-
-
 }
 
 export default InputField
