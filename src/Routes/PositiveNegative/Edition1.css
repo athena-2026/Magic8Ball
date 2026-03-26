@@ -7,25 +7,26 @@
 }
 
 body {
-  margin: 0;
-  padding:0;
-  font-family: Arial, Helvetica, sans-serif;
   background-image: url('./BallAssets/Mode1Background.png');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-attachment: fixed;
-  text-align: center;
 }
 
 #header {
   display:inline-block;
   color: hsl(0, 0%, 100%);
+  margin-top: 0;
   padding: 0 5px;
   font-weight: bolder;
   font-size: medium;
   font-family: Arial;
   width: fit-content;
   text-shadow: 2px 2px 5px rgb(127, 232, 255);;
+}
+
+#header p {
+  margin: 0;
+  padding:0;
+  color: greenyellow;
+  text-shadow: 2px 2px 5px rgb(230, 43, 40);
 }
 
 .inputField {

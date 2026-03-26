@@ -10,12 +10,13 @@ body {
   margin: 0;
   padding:0;
   font-family: Arial, Helvetica, sans-serif;
-  background-image: url('https://th.bing.com/th/id/R.fcdba644c6627897a9e28b332b19d87d?rik=%2bDYX4AyuN8JAag&riu=http%3a%2f%2fwww.clipartbest.com%2fcliparts%2fyck%2f4bX%2fyck4bX7cE.png&ehk=A4YcRZBwQBxr4nIXadbN%2ftiNfLYRDX6ZaDPxAy1ohqo%3d&risl=&pid=ImgRaw&r=0');
+  background-image: url('./BallAssets/background.png');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-attachment: fixed;
   text-align: center;
 }
+
 
 #header {
   display:inline-block;
@@ -63,14 +64,11 @@ body {
   animation-duration: 2s;
 }
 
-.imageHolder .positive{
-  color: chartreuse;
-    filter: drop-shadow(1px 1px 20px rgb(131, 255, 117))
+.imageHolder p{
+  color: rgb(61, 132, 255);
+    filter: drop-shadow(1px 1px 20px rgb(117, 211, 255))
 }
-.imageHolder .negative{
-  color: rgb(236, 42, 8);
-  filter: drop-shadow(1px 1px 20px rgb(255, 0, 0))
-}
+
 #submitQuestion {
   width: fit-content;
   height: 50%;

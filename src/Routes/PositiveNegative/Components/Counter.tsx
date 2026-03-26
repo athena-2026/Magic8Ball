@@ -1,4 +1,4 @@
-import '../App.css'
+import '../Edition1.css'
 import { useCounter } from "../../Context/CounterContext"
 
 function Counter() {

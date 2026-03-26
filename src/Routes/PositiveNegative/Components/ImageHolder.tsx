@@ -3,7 +3,7 @@ import { useAnswer } from "../../Context/AnswerContext"
 import { useShake } from "../../Context/ShakeContext"
 import { usePositive } from "../../Context/PositiveContext"
 
-import '../App.css'
+import '../Edition1.css'
 
 import ballClosed from '../BallAssets/ballClosed.png'
 import ballOpen from '../BallAssets/ballOpen.png'

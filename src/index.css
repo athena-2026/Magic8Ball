@@ -1,17 +1,11 @@
-
-
 #navbarList {
   list-style-type: none;
   background-color: rgba(255, 255, 255, 0.429);
   padding:0;
   margin: 0;
   display: flex;
-  justify-content: center;
   border-radius: 2px;
-}
-
-#navbarList li{
-  float: left;
+  justify-content: center;
 }
 
 #navbarList li a {
@@ -19,14 +13,10 @@
   color: rgb(0, 0, 0);
   font-family: 'Franklin Gothic Light', sans-serif;
   font-size: medium;
-  padding: 14px 16px;
+  padding: 14px 14px;
   text-decoration: none;
 }
 
 #navbarList li a:hover {
   background-color: rgba(255, 255, 255, 0.429);
-}
-
-#navbarList li a.active {
-  background-color: aqua;
 }

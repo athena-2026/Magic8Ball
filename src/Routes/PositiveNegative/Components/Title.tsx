@@ -1,5 +1,3 @@
-
-
 function Title() {
     return (
         <div id="header">
