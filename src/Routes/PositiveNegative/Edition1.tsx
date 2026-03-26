@@ -1,9 +1,9 @@
-import './App.css'
+import './Edition1.css'
 import Title from './Components/Title';
 import ImageHolder from './Components/ImageHolder';
 import InputField from './Components/InputField';
 import Counter from './Components/Counter'
-import {AppProviders} from './Context/ContextProvider';
+import {AppProviders} from '../Context/ContextProvider';
 
 
 function App() {

@@ -9,9 +9,9 @@ export const FetchData = () => {
     const { setShake } = useShake()
     const { setBallOpen } = useBall()
 
-    const fetchingData = async (phrase: string) => {
+    const fetchingData = async () => {
         try {
-            const response = await fetch(`http://localhost:8080/api/${phrase}`)
+            const response = await fetch(`http://localhost:8080/api/neutralPhrases`)
             const data = await response.text()
 
             setTimeout(() => {

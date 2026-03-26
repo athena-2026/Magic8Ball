@@ -3,17 +3,12 @@ import {Link} from "react-router-dom"
 
 function Navbar() {
   return (
-    <>
       <nav>
-        <div>
             <ul id="navbarList">
-                <li><a href="">Link1</a></li>
-                <li><a href="">Link2</a></li>
-                <li><a href="">Link3</a></li>
+                <li><Link to="/">Normal edition</Link></li>
+                <li><Link to="/edition1">Positive/Negative mode</Link></li>
             </ul>
-        </div>
       </nav>
-    </>
   )
 }
 

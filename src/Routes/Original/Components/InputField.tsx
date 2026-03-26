@@ -2,7 +2,6 @@ import { useQuestion } from "../../Context/QuestionContext"
 import { useShake } from "../../Context/ShakeContext"
 import { useBall } from "../../Context/BallOpenContext"
 import { useCounter } from "../../Context/CounterContext"
-import { usePositive } from "../../Context/PositiveContext"
 import { FetchData } from "./FetchData"
 
 
@@ -13,7 +12,6 @@ const InputField: React.FC = () => {
     const { shake, setShake } = useShake();
     const { setBallOpen } = useBall();
     const {setCounter} = useCounter();
-    const {setPositive} = usePositive();
     const {fetchingData} = FetchData();
 
 
@@ -24,16 +22,7 @@ const InputField: React.FC = () => {
             setShake(true)
             setCounter(prev =>prev+1)
 
-            const isPositive = Math.random() <0.5
-            let phrase = ""
-            if (isPositive) {
-                phrase = "positivePhrase"
-                setPositive(true)
-            } else {
-                phrase = "negativePhrase"
-                setPositive(false)
-            }
-            fetchingData(phrase)
+            fetchingData()
         }
     }
 
